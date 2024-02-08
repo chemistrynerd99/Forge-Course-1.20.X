@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mccourse:block/null_block"
+    }
+  }
+}
