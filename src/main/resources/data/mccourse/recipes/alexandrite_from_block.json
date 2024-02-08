@@ -6,6 +6,8 @@
       "item": "mccourse:alexandrite_block"
     }
   ],
-  "result": "mccourse:alexandrite",
+  "result": {
+  "item": "mccourse:alexandrite",
   "count": 9
+}
 }
