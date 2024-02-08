@@ -2,6 +2,7 @@ package net.chemnerd.mccourse.block;
 
 import net.chemnerd.mccourse.MCCourseMod;
 import net.chemnerd.mccourse.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -26,8 +27,25 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
     public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK = registerBlock("raw_alexandrite_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK)));
+
+    public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock("alexandrite_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+
+    public static final RegistryObject<Block> DEEPSLATE_ALEXANDRITE_ORE = registerBlock("deepslate_alexandrite_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)));
+
+    public static final RegistryObject<Block> ENDSTONE_ALEXANDRITE_ORE = registerBlock("endstone_alexandrite_ore",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+                    .requiresCorrectToolForDrops().strength(7.0F, 6.0F).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> NETHER_ALEXANDRITE_ORE = registerBlock("nether_alexandrite_ore",
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.NETHER).instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.NETHER_ORE)));
+
+    public static final RegistryObject<Block> NULL_BLOCK = registerBlock("null_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
 
 
 
