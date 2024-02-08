@@ -1,6 +1,7 @@
 package net.chemnerd.mccourse;
 
 import com.mojang.logging.LogUtils;
+import net.chemnerd.mccourse.block.ModBlocks;
 import net.chemnerd.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,6 +27,7 @@ public class MCCourseMod {
 
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -42,6 +44,10 @@ public class MCCourseMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ALEXANDRITE);
             event.accept(ModItems.RAW_ALEXANDRITE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
         }
     }
 
