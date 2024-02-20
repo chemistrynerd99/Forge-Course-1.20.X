@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    " A ",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:note_block"
+    }
+  },
+  "result": {
+    "item": "mccourse:sound_block"
+  }
+}

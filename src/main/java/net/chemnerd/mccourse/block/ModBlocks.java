@@ -1,6 +1,7 @@
 package net.chemnerd.mccourse.block;
 
 import net.chemnerd.mccourse.MCCourseMod;
+import net.chemnerd.mccourse.block.custom.SoundBlock;
 import net.chemnerd.mccourse.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -50,6 +51,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> NULL_BLOCK = registerBlock("null_block",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+
+    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
 
